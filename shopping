@@ -1,0 +1,1013 @@
+/**
+* Write a description of class www here.
+*
+* @auth
+* or (your name)
+* @version (a version number or a date)
+*/
+ //to write a program on online shopping and print the bill
+import java.io.*;//importing a package
+public class shopping
+ {
+ public static void main(String args[])throws IOException
+{
+ InputStreamReader read=new InputStreamReader(System.in);//creating a object
+ BufferedReader in=new BufferedReader(read);//creating a object
+ 
+int amt=0,twf=0,twc=0,tzf=0,cr=0,tmf=0,tbc=0,tgc=0,toamt=0,tamt=0,tac=0,tec=0,tkc=0,tsc=0,thc=0,tmac=0;
+String choice="y";String st=" ";//initializing
+ System.out.println("*******");
+ System.out.println("WELCOME TO WORLD WIDE WISHES");
+ System.out.println("*******");
+ System.out.println("The online shopping where all your needs are fulfilled from home");
+ System.out.println("Just a click, things are here");
+ System.out.println("We allow our customers to shop conveniently and seek their extreme satisfaction");
+
+ System.out.println("Choices are Yours");
+ System.out.println("Enter 1 for CLOTHES");
+ System.out.println("Enter 2 for HOME APPLIANCES");
+ System.out.println("Enter 3 for BEAUTY");
+ System.out.println("Enter 4 for ACCESSORIES");
+ System.out.println("Enter 5 for FOOTWEAR"); 
+ System.out.println("Enter your choice");
+ int ch = Integer.parseInt(in.readLine());//reading a variable
+ switch(ch)
+ {
+ case 1:
+ System.out.println("Welcome to CLOTHES section");
+ System.out.println("Select your category");
+ System.out.println("Enter 1 for WOMEN");
+ System.out.println("Enter 2 for MEN");
+ System.out.println("Enter 3 for KIDS");
+ System.out.println("Enter the choice");
+ int str=Integer.parseInt(in.readLine());
+ if(str==1||str==2||str==3)
+ {
+ if(str==1)
+ {
+ System.out.println("Welcome to WOMEN'S section");
+ System.out.println("Select your convenient size");
+ System.out.println("Enter 1 for SMALL");
+ System.out.println("Enter 2 for LARGE");
+ System.out.println("Enter 3 for EXTRA LARGE");
+ System.out.println("Enter 4 for DOUBLE XL");
+ System.out.println("Enter 5 for THRIPLE XL");
+
+ System.out.println("Enter your size");
+ int size=Integer.parseInt(in.readLine());//reading the variable
+
+ System.out.println();
+
+ if(size>=1&&size<=5)
+ {
+ System.out.println("Formal wear , enter 'f'");
+ System.out.println("Casual wear , enter 'c'"); 
+ System.out.println("Ethnic wear , enter 'e'");
+ 
+
+ System.out.println("Enter your choice");
+ st=in.readLine();
+}
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ 
+
+
+ //reading the variable
+ if(st!="00")
+
+ if(st.equalsIgnoreCase("f"))
+ {
+ System.out.println("WOMEN'S FORMAL SECTION");
+ System.out.println("Enter 1 for Trousers =Rs200 ");
+ System.out.println("Enter 2 for Coats = Rs400");
+ System.out.println("Enter 3 for Pencil Skirts = Rs300 ");
+ System.out.println("Enter 4 for Shirts = Rs500");
+ System.out.println("Enter 5 for Ties = Rs150");
+ System.out.println();
+
+
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int fd= Integer.parseInt(in.readLine());//reading the variable
+ System.out.println("Enter the quantity");
+ int tfd = Integer.parseInt(in.readLine()); //reading the variable
+ if(fd==1) 
+ amt= 200*tfd;
+ if(fd==2)
+ amt= 400*tfd;
+ if(fd==3)
+ amt= 300*tfd;
+ if(fd==4)
+ amt= 500*tfd;
+ if(fd==5)
+ amt= 150*tfd;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading the variable
+ }
+ }
+
+ if(st.equalsIgnoreCase("c"))
+ {
+ System.out.println("WOMEN'S CASUAL SECTION");
+ System.out.println("Enter 1 for Tops and Tshirts = Rs300");
+ System.out.println("Enter 2 for Jeans and Jeggings = Rs500");
+ System.out.println("Enter 3 for Dresses and Jumpsuits = Rs700");
+ System.out.println("Enter 4 for Shorts and Leggings = Rs600");
+ System.out.println("Enter 5 for Winter wear = Rs950");
+ System.out.println("Enter 6 for Rainwear = Rs600");
+ System.out.println("Enter 7 for Track Pants and Joggers = Rs900");
+ System.out.println("Enter 8 for Shrugs and Capes = Rs200");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int fc= Integer.parseInt(in.readLine());//reading the variable 
+ System.out.println("Enter the quantity");
+ int tfc = Integer.parseInt(in.readLine());//reading the variable
+ if(fc==1)
+ amt=300*tfc;
+ if(fc==2)
+ amt=500*tfc;
+ if(fc==3)
+ amt=700*tfc;
+ if(fc==4)
+ amt=600*tfc;
+ if(fc==5)
+ amt=950*tfc;
+ if(fc==6)
+ amt=600*tfc;
+ if(fc==7)
+ amt=900*tfc;
+ if(fc==8)
+ amt=200*tfc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+ }
+ if(st.equalsIgnoreCase("e"))
+ {
+ System.out.println("WOMEN'S ETHNIC WEAR SECTION");
+ System.out.println("Enter 1 for Kurtas = Rs500");
+ System.out.println("Enter 2 for Sarees = Rs600");
+ System.out.println("Enter 3 for Dress Materials = Rs400");
+ System.out.println("Enter 4 for Salwar suits = Rs600");
+ System.out.println("Enter 5 for Lehanga Cholis = Rs800"); 
+ System.out.println("Enter 6 for Gowns = Rs1000");
+ System.out.println("Enter 7 for Blouses = Rs300");
+ System.out.println("Enter 8 for Chunnis and Dupattas = Rs200");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int fe= Integer.parseInt(in.readLine());//reading a variable
+ System.out.println("Enter the quantity");
+ int tfe = Integer.parseInt(in.readLine()); //reading a variable
+ if(fe==1)
+ amt=500*tfe;
+ if(fe==2)
+ amt=600*tfe;
+ if(fe==3)
+ amt=400*tfe;
+ if(fe==4)
+ amt=600*tfe;
+ if(fe==5)
+ amt=800*tfe;
+ if(fe==6)
+ amt=1000*tfe;
+ if(fe==7)
+ amt=300*tfe;
+ if(fe==8)
+ amt=200*tfe;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine(); //reading a variable
+ }
+ 
+ }
+ }
+
+ if(str==2)
+ {
+ System.out.println("WELOCOME TO MEN'S SECTION");
+ System.out.println("Select your convenient size");
+ System.out.println("Enter 1 for SMALL");
+ System.out.println("Enter 2 for LARGE");
+ System.out.println("Enter 3 for EXTRA LARGE");
+ System.out.println("Enter 4 for DOUBLE XL");
+ System.out.println("Enter 5 for THRIPLE XL");
+
+ System.out.println("Enter your choice");
+ int size=Integer.parseInt(in.readLine()); // reading a variable
+ if(size>=1&&size<=5)
+ {
+ System.out.println("Enter 1 for FORMAL WEAR");
+ System.out.println("Enter 2 for CASUAL WEAR");
+
+ System.out.println("Enter your choice");
+
+ cr =Integer.parseInt(in.readLine());
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+
+ //reading a variable
+ if(cr!=0)
+
+ if(cr==1)
+ {
+ System.out.println("MEN'S FORMAL SECTION");
+ System.out.println("Enter 1 for Trousers =Rs600 ");
+ System.out.println("Enter 2 for Coats = Rs800");
+ System.out.println("Enter 3 for Polos = Rs900 ");
+ System.out.println("Enter 4 for Shirts = Rs500");
+ System.out.println("Enter 5 for Ties = Rs150");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int mf= Integer.parseInt(in.readLine()); //reading a variable
+ if(mf>=1&&mf<=5)
+ {
+ System.out.println("Enter the quantity");
+ tmf = Integer.parseInt(in.readLine()); //reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(mf==1)
+ amt= 600*tmf;
+ if(mf==2)
+ amt= 800*tmf;
+ if(mf==3)
+ amt= 900*tmf;
+ if(mf==4)
+ amt= 500*tmf; 
+ if(mf==5)
+ amt= 150*tmf;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();
+ }
+ }
+ if(cr==2)
+ {
+ System.out.println("MEN'S CASUAL SECTION");
+ System.out.println("Enter 1 for T-shirts = Rs300");
+ System.out.println("Enter 2 for Jeans = Rs500");
+ System.out.println("Enter 3 for Pyjamas = Rs300");
+ System.out.println("Enter 4 for Shorts = Rs300");
+ System.out.println("Enter 5 for Winter wear = Rs950");
+ System.out.println("Enter 6 for Rainwear = Rs600");
+ System.out.println("Enter 7 for Track Pants = Rs900");
+ System.out.println("Enter 8 for Sportswear = Rs200");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int mc= Integer.parseInt(in.readLine()); //reading a variable
+ System.out.println("Enter the quantity");
+ int tmc = Integer.parseInt(in.readLine()); // reading a variable
+ if(mc==1)
+ amt=300*tmc;
+ if(mc==2)
+ amt=500*tmc;
+ if(mc==3)
+ amt=300*tmc; 
+ if(mc==4)
+ amt=300*tmc;
+ if(mc==5)
+ amt=950*tmc;
+ if(mc==6)
+ amt=600*tmc;
+ if(mc==7)
+ amt=900*tmc;
+ if(mc==8)
+ amt=200*tmc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+ }
+
+
+ }
+//kids section
+
+ if(str==3)
+ {
+ System.out.println("WELCOME TO KID'S SECTION");
+ System.out.println("Enter 'g' for Girls");
+ System.out.println("Enter 'b' for Boys");
+ String stt=in.readLine();
+//kids girls section
+ if(stt.equalsIgnoreCase("g"))
+ {
+ System.out.println("WELCOME TO GIRL'S SECTION");
+ System.out.println("Enter the age of the kid");
+ int age= Integer.parseInt(in.readLine());
+ System.out.println("Enter 1 for Forks = Rs400"); 
+ System.out.println("Enter 2 for Skirts = Rs300");
+ System.out.println("Enter 3 for Tops & Jeans = Rs700");
+ System.out.println("Enter 4 for Jumpsuits = Rs800");
+ System.out.println("Enter 5 for Lehanga Cholis = Rs900");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int gc= Integer.parseInt(in.readLine());//reading a variable
+ if(gc>=1&&gc<=5)
+ {
+ System.out.println("Enter the quantity");
+ tgc = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(gc==1)
+ amt= 400*tgc;
+ if(gc==2)
+ amt= 300*tgc;
+ if(gc==3)
+ amt= 700*tgc;
+ if(gc==4)
+ amt= 800*tgc;
+ if(gc==5)
+ amt= 900*tgc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable 
+ }
+ }
+//kids boys section
+ if(stt.equalsIgnoreCase("b"))
+ {
+ System.out.println("WELCOME TO BOY'S SECTION");
+ System.out.println("Enter the age of the kid");
+ int age= Integer.parseInt(in.readLine());
+ System.out.println("Enter 1 for Shirts = Rs400");
+ System.out.println("Enter 2 for T-shirts = Rs300");
+ System.out.println("Enter 3 for Jeans = Rs700");
+ System.out.println("Enter 4 for Jumpsuits = Rs800");
+ System.out.println("Enter 5 for Sherwanis = Rs900");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int bc= Integer.parseInt(in.readLine());//reading a variable
+ if(bc<=1&&bc>=5)
+ {
+ System.out.println("Enter the quantity");
+ tbc = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(bc==1)
+ amt= 400*tbc;
+ if(bc==2)
+ amt= 300*tbc;
+ if(bc==3) 
+ amt= 700*tbc;
+ if(bc==4)
+ amt= 800*tbc;
+ if(bc==5)
+ amt= 900*tbc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine(); //reading a variable
+ }
+ }
+
+ }
+ if(tamt!=0)
+ {
+//printing the bill
+ System.out.println("*******WORLD WIDE WISHES*******");
+ System.out.println("***********BILL************** **");
+ System.out.println("Total Cost = Rs."+tamt);
+ System.out.println("Delivery Charges = Rs.100");
+ toamt=tamt+100;
+ System.out.println("AMOUNT TO BE PAID = "+toamt);
+ }
+
+ else
+ {
+ System.out.println("AMOUNT TO BE PAID:0");
+ }
+}
+else
+{
+    System.out.println("wrong choice");
+}
+ break;
+//home appliances section
+ case 2:
+ System.out.println("WELCOME TO HOME APPLIANCES SECTION");
+ System.out.println("Enter 'E' for ELECTRONICS");
+ System.out.println("Enter 'K' for KITCHEN APPLIANCES");
+ System.out.println("Enter your choice"); 
+ String cho= in.readLine();//reading a variable
+ if((cho.equalsIgnoreCase("e"))||(cho.equalsIgnoreCase("k")))
+ 
+ {
+//electronic section
+ if (cho.equalsIgnoreCase("E"))
+ {
+ System.out.println("WELCOME TO ELECTRONICS SECTION");
+ System.out.println("Enter 1 for TELEVISION = Rs30000");
+ System.out.println("Enter 2 for WASHING MACHINE = Rs15000");
+ System.out.println("Enter 3 for AIR CONDITIONER = Rs40000");
+ System.out.println("Enter 4 for COOLER = Rs20000");
+ System.out.println("Enter 5 for GEYSERS = Rs5000");
+ System.out.println();
+
+
+ while (choice.equalsIgnoreCase("y"))
+ {
+
+ System.out.println("Enter your choice");
+ int ec= Integer.parseInt(in.readLine());//reading a variable
+ if(ec>=1&&ec<=5)
+ {
+ System.out.println("Enter the quantity");
+ tec = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(ec==1)
+ amt= 30000*tec;
+ if(ec==2)
+ amt= 15000*tec;
+ if(ec==3) 
+ amt= 40000*tec;
+ if(ec==4)
+ amt= 20000*tec;
+ if(ec==5)
+ amt= 5000*tec;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+
+ }
+//kitchen appliances section
+ if (cho.equalsIgnoreCase("K"))
+ {
+ System.out.println("WELCOME TO KITCHEN APPLIANCES SECTION");
+ System.out.println("Enter 1 for REFRIGERATOR = Rs20000");
+ System.out.println("Enter 2 for MIXER GRINDRES = Rs2000");
+ System.out.println("Enter 3 for OVEN = Rs6000");
+ System.out.println("Enter 4 for MICROWAVE = Rs4000");
+ System.out.println("Enter 5 for TOASTERS = Rs3000");
+ System.out.println("Enter 6 for CHIMNEYS = Rs15000");
+ System.out.println("Enter 7 for HAND BLENDERS = Rs2000");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int kc= Integer.parseInt(in.readLine());//reading a variable
+ if(kc>=1&&kc<=7)
+ {
+ System.out.println("Enter the quantity");
+ tkc = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(kc==1)
+ amt= 20000*tkc;
+ if(kc==2)
+ amt= 2000*tkc;
+ if(kc==3)
+ amt= 6000*tkc;
+ if(kc==4)
+ amt= 4000*tkc;
+ if(kc==5)
+ amt= 3000*tkc;
+ if(kc==6)
+ amt= 15000*tkc;
+ if(kc==7)
+ amt= 2000*tkc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+
+
+ }
+}
+else
+{
+    System.out.println("wrong choice");
+}
+
+
+ if(tamt!=0)
+ {
+//printing the bill
+ System.out.println("*******WORLD WIDE WISHES*******");
+ System.out.println("***********BILL************** **"); 
+ System.out.println("Total Cost = Rs."+tamt);
+ System.out.println("Delivery Charges = Rs.100");
+ toamt=tamt+100;
+ System.out.println("AMOUNT TO BE PAID = "+toamt);
+ }
+ else
+ {
+ System.out.println("AMOUNT TO BE PAID IS:0");
+ }
+
+ break;
+//beauty section
+ case 3:
+ System.out.println("WELCOME TO BEAUTY SECTION");
+ System.out.println("Enter 'h' for HEALTH CARE PRODUCTS");
+ System.out.println("Enter 'm' for MAKEUP PRODUCTS");
+ System.out.println("Enter 's' for HAIR STYLING APPLIANCES");
+ System.out.println("Enter your choice");
+ String chu= in.readLine();//reading a variable
+ if((chu.equalsIgnoreCase("h"))||(chu.equalsIgnoreCase("m"))||(chu.equalsIgnoreCase("s")))
+ {
+//health care products
+ if (chu.equalsIgnoreCase("h"))
+ {
+ System.out.println("WELCOME TO HEALTH CARE PRODUCTS SECTION");
+ System.out.println("Enter 1 for MOISTURIZER = Rs100");
+ System.out.println("Enter 2 for BODY LOTION = Rs200");
+ System.out.println("Enter 3 for SUNSCREAM = Rs300");
+ System.out.println("Enter 4 for HAIR SERUM = Rs250");
+ System.out.println("Enter 5 for FACEWASH = Rs150");
+ System.out.println("Enter 6 for FACEMASK & SCRUBS = Rs400");
+ System.out.println("Enter 7 for FACIAL KIT = Rs500");
+ System.out.println("Enter 8 for LIP BALM = Rs100");
+ System.out.println("Enter 9 for SHAMPOO = Rs200");
+ System.out.println("Enter 10 for CONDITIONERS = Rs200"); 
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int hc= Integer.parseInt(in.readLine());//reading a variable
+ if(hc>=1&&hc<=10)
+ {
+ System.out.println("Enter the quantity");
+ thc = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(hc==1)
+ amt=100*thc;
+ if(hc==2)
+ amt=200*thc;
+ if(hc==3)
+ amt=300*thc;
+ if(hc==4)
+ amt=250*thc;
+ if(hc==5)
+ amt=150*thc;
+ if(hc==6)
+ amt=400*thc;
+ if(hc==7)
+ amt=500*thc;
+ if(hc==8)
+ amt=100*thc;
+ if(hc==9) 
+ amt=200*thc;
+ if(hc==10)
+ amt=200*thc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+ }
+//makeup products section
+ if (chu.equalsIgnoreCase("m"))
+ {
+ System.out.println("WELCOME TO MAKEUP PRODUCTS SECTION");
+ System.out.println("Enter 1 for PRIMER = Rs300");
+ System.out.println("Enter 2 for FOUNDATION = Rs500");
+ System.out.println("Enter 3 for CONCEALER = Rs450");
+ System.out.println("Enter 4 for CONTOUR KIT = Rs500");
+ System.out.println("Enter 5 for COMPACT = Rs300");
+ System.out.println("Enter 6 for EYELINER = Rs150");
+ System.out.println("Enter 7 for EYESHADOW = Rs500");
+ System.out.println("Enter 8 for MASCARA = Rs150");
+ System.out.println("Enter 9 for BLUSHER = Rs200");
+ System.out.println("Enter 10 for HIGHLIGHTER = Rs200");
+ System.out.println("Enter 11 for BLENDER & BRUSH = Rs300");
+ System.out.println("Enter 12 for NAIL POLISH = Rs150");
+ System.out.println("Enter 13 for LIPSTICK = Rs400");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int mac= Integer.parseInt(in.readLine());//reading a variable
+ if(mac>=1&&mac<=13)
+ {
+ System.out.println("Enter the quantity");
+ tmac = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(mac==1)
+ amt=300*tmac;
+ if(mac==2)
+ amt=500*tmac;
+ if(mac==3)
+ amt=450*tmac;
+ if(mac==4)
+ amt=500*tmac;
+ if(mac==5)
+ amt=300*tmac;
+ if(mac==6)
+ amt=150*tmac;
+ if(mac==7)
+ amt=500*tmac;
+ if(mac==8)
+ amt=150*tmac;
+ if(mac==9)
+ amt=200*tmac;
+ if(mac==10)
+ amt=200*tmac;
+ if(mac==11)
+ amt=300*tmac;
+ if(mac==12)
+ amt=150*tmac; 
+ if(mac==13)
+ amt=400*tmac;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+ }
+//hairstyling products
+ if (chu.equalsIgnoreCase("s"))
+ {
+ System.out.println("WELCOME TO HAIR STYLING PRODUCTS SECTION");
+ System.out.println("Enter 1 for HAIR STRAIGHTNER = Rs2000");
+ System.out.println("Enter 2 for HAIR CURLERS = Rs2000");
+ System.out.println("Enter 3 for HAIR DRYERS = Rs1500");
+ System.out.println("Enter 4 for HAIR STYLING KIT = Rs2000");
+ System.out.println("Enter 5 for HAIR CRIMPERS = Rs2000");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int sc= Integer.parseInt(in.readLine());//reading a variable
+ if(sc>=1&&sc<=5)
+ {
+ System.out.println("Enter the quantity");
+ tsc = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(sc==1)
+ amt= 2000*tsc; 
+ if(sc==2)
+ amt= 2000*tsc;
+ if(sc==3)
+ amt= 1500*tsc;
+ if(sc==4)
+ amt= 2000*tsc;
+ if(sc==5)
+ amt= 2000*tsc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+ }
+ }
+ else
+ {
+ System.out.println("wrong choice");
+}
+ if(tamt!=0)
+ {
+//printing the bill
+ System.out.println("*******WORLD WIDE WISHES*******");
+ System.out.println("***********BILL************** **");
+ System.out.println("Total Cost = Rs."+tamt);
+ System.out.println("Delivery Charges = Rs.100");
+ toamt=tamt+100;
+ System.out.println("AMOUNT TO BE PAID = "+toamt);
+ }
+ else
+ {
+ System.out.println("AMOUNT TO BE PAID:0");
+ }
+
+ break;
+//accessories section
+ case 4:
+ System.out.println("WELCOME TO ACCESSORIES SECTION");
+ System.out.println("Enter 'f' for WOMEN'S ACCESSORIES"); 
+ System.out.println("Enter 'n' for MEN'S ACCESSORIES");
+ System.out.println("Enter your choice");
+ String chi= in.readLine();//reading a variable
+ if((chi.equalsIgnoreCase("f"))||(chi.equalsIgnoreCase("n")))
+ {
+//women's accessories section
+ if (chi.equalsIgnoreCase("f"))
+ {
+ System.out.println("WELCOME TO WOMEN'S ACCESSORIES SECTION");
+ System.out.println("Enter 1 for CHAINS = Rs200");
+ System.out.println("Enter 2 for PENDANTS = Rs150");
+ System.out.println("Enter 3 for NECKLACES = Rs300");
+ System.out.println("Enter 4 for RINGS = Rs100");
+ System.out.println("Enter 5 for STUDDED EARRINGS = Rs100");
+ System.out.println("Enter 6 for DANGLING EARRINGS = Rs150");
+ System.out.println("Enter 7 for BRACELETS = Rs200");
+ System.out.println("Enter 8 for NOSERINGS = Rs150");
+ System.out.println("Enter 9 for BANGLES = Rs200");
+ System.out.println("Enter 10 for WATCHES = RS500");
+ System.out.println("Enter 11 for ANKLETS = Rs200");
+ System.out.println("Enter 12 for SUNGLASSES = Rs500");
+ System.out.println("Enter 13 for BELTS = Rs600");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int wc= Integer.parseInt(in.readLine());//reading a variable
+ if(wc>=1&&wc<=13)
+ {
+ System.out.println("Enter the quantity");
+ twc = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(wc==1)
+ amt=200*twc;
+ if(wc==2)
+ amt=150*twc;
+ if(wc==3)
+ amt=300*twc;
+ if(wc==4)
+ amt=100*twc;
+ if(wc==5)
+ amt=100*twc;
+ if(wc==6)
+ amt=150*twc;
+ if(wc==7)
+ amt=200*twc;
+ if(wc==8)
+ amt=150*twc;
+ if(wc==9)
+ amt=200*twc;
+ if(wc==10)
+ amt=500*twc;
+ if(wc==11)
+ amt=200*twc;
+ if(wc==12)
+ amt=500*twc;
+ if(wc==13)
+ amt=600*twc;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable 
+ }
+ }
+//men 's accessories section
+ 
+ if (chi.equalsIgnoreCase("n"))
+ {
+System.out.println("WELCOME TO MEN'S ACCESSORIES SECTION");
+ System.out.println("Enter 1 for CHAINS = Rs200");
+ System.out.println("Enter 2 for BRACELETS = Rs300");
+ System.out.println("Enter 3 for RINGS = Rs100");
+ System.out.println("Enter 4 for STUDS = Rs100");
+ System.out.println("Enter 5 for WALLETS = Rs500");
+ System.out.println("Enter 6 for WATCHES = Rs800");
+ System.out.println("Enter 7 for SUNGLASSES = Rs600");
+ System.out.println("Enter 8 for BELTS = Rs500");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int ac= Integer.parseInt(in.readLine());//reading a variable
+ if(ac>=1&&ac<=8)
+ {
+ System.out.println("Enter the quantity");
+ tac = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(ac==1)
+ amt=200*tac;
+ if(ac==2)
+ amt=300*tac; 
+ if(ac==3)
+ amt=100*tac;
+ if(ac==4)
+ amt=100*tac;
+ if(ac==5)
+ amt=500*tac;
+ if(ac==6)
+ amt=800*tac;
+ if(ac==7)
+ amt=600*tac;
+ if(ac==8)
+ amt=500*tac;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+ }
+}
+else
+{
+    System.out.println("wrong choice");
+}
+ if(tamt!=0)
+ {
+// printing the bill
+ System.out.println("*******WORLD WIDE WISHES*******");
+ System.out.println("***********BILL************** **");
+ System.out.println("Total Cost = Rs."+tamt);
+ System.out.println("Delivery Charges = Rs.100");
+ toamt=tamt+100;
+ System.out.println("AMOUNT TO BE PAID = "+toamt);
+ }
+ else
+ {
+ System.out.println("AMOUNT TO BE PAID IS:0");
+ }
+ 
+ break;
+//footwear section
+ case 5:
+ System.out.println("WELCOME TO FOOTWEAR SECTION");
+ System.out.println("Enter 'W' for WOMEN'S FOOTWEAR SECTION");
+ System.out.println("Enter 'M' for MEN'S FOOTWEAR SECTION");
+ System.out.println("Enter your choice ");
+ String chc= in.readLine();
+ if((chc.equalsIgnoreCase("w"))||(chc.equalsIgnoreCase("m")))
+ {
+//women's footwear section
+ if (chc.equalsIgnoreCase("W"))
+ {
+ System.out.println("WELCOME TO WOMEN'S FOOTWEAR SECTION");
+ System.out.println("Enter 1 for BALLET FLATS = Rs300");
+ System.out.println("Enter 2 for SLIPPERS = Rs250");
+ System.out.println("Enter 3 for FORMAL SHOES = Rs400");
+ System.out.println("Enter 4 for BLOCK HEELS = Rs600");
+ System.out.println("Enter 5 for WEDGES = Rs700");
+ System.out.println("Enter 6 for PENCIL HEELS = Rs800");
+ System.out.println("Enter 7 for BOOTS = Rs800");
+ System.out.println("Enter 8 for SPORTS SHOES = Rs1000");
+ System.out.println("Enter 9 for SNEAKERS = Rs800");
+ System.out.println("Enter 10 for CROCS = Rs600");
+ System.out.println("Enter 11 for PUMPS = Rs600");
+ System.out.println("Enter 12 for SANDALS = Rs400");
+ System.out.println();
+
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int wf= Integer.parseInt(in.readLine());
+ if(wf>=1&&wf<=12)
+ {
+ System.out.println("Enter the quantity"); 
+ twf = Integer.parseInt(in.readLine());//reading a variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(wf==1)
+ amt=300*twf;
+ if(wf==2)
+ amt=250*twf;
+ if(wf==3)
+ amt=400*twf;
+ if(wf==4)
+ amt=600*twf;
+ if(wf==5)
+ amt=700*twf;
+ if(wf==6)
+ amt=800*twf;
+ if(wf==7)
+ amt=800*twf;
+ if(wf==8)
+ amt=1000*twf;
+ if(wf==9)
+ amt=800*twf;
+ if(wf==10)
+ amt=600*twf;
+ if(wf==11)
+ amt=600*twf;
+ if(wf==12)
+ amt=400*twf;
+ tamt=tamt+amt; 
+ System.out.println("Do you want to place more orders in this section ? Enter Y/N");
+ choice=in.readLine();//reading a variable
+ }
+
+
+ }
+//men's footwear section
+ if (chc.equalsIgnoreCase("M"))
+ {
+ System.out.println("WELCOME TO MEN'S FOOTWEAR SECTION");
+ System.out.println("Enter 1 for SANDALS & FLOATERS = Rs600");
+ System.out.println("Enter 2 for SPORTS SHOES = Rs1000");
+ System.out.println("Enter 3 for FORMAL SHOES = Rs800");
+ System.out.println("Enter 4 for SNEAKERS = Rs700");
+ System.out.println("Enter 5 for BOOTS = Rs900");
+ System.out.println("Enter 6 for LOAFERS = Rs400");
+ System.out.println("Enter 7 for BOAT SHOES = Rs500");
+ System.out.println("Enter 8 for ETHNIC SHOES = Rs800");
+ System.out.println();
+ while (choice.equalsIgnoreCase("y"))
+ {
+ System.out.println("Enter your choice");
+ int zf= Integer.parseInt(in.readLine());//reading a variable
+ if(zf>=1&&zf<=8)
+ {
+ System.out.println("Enter the quantity");
+ tzf = Integer.parseInt(in.readLine());//reading variable
+ }
+ else
+ {
+ System.out.println("ENTERED WRONG CHOICE");
+ }
+ if(zf==1)
+ amt=600*tzf;
+ if(zf==2)
+ amt=1000*tzf;
+ if(zf==3)
+ amt=800*tzf;
+ if(zf==4)
+ amt=700*tzf;
+ if(zf==5)
+ amt=900*tzf;
+ if(zf==6)
+ amt=400*tzf;
+ if(zf==7)
+ amt=500*tzf;
+ if(zf==8)
+ amt=800*tzf;
+ tamt=tamt+amt;
+ System.out.println("Do you want to place more orders in this section? Enter Y/N");
+ choice=in.readLine();//reading variable
+ }
+ }
+}
+else
+{
+System.out.println("wrong choice");
+}
+ if(tamt!=0)
+ {
+//printing the bill
+ System.out.println("*******WORLD WIDE WISHES*******");
+ System.out.println("***********BILL************** **");
+ System.out.println("Total Cost = Rs."+tamt);
+ System.out.println("Delivery Charges = Rs.100");
+ toamt=tamt+100;
+ System.out.println("AMOUNT TO BE PAID = "+toamt);
+ }
+ else
+ {
+ System.out.println("AMOUNT TO BE PAID IS:0 ");
+ }
+ break;
+ default:
+ System.out.println("WRONG CHOICE!!!");
+ }
+ System.out.println("THANKS FOR VISITING WORLD WIDE WISHES!!!");
+ System.out.println("YOUR PLEASURE OUR COMFORT!!!");
+ System.out.println("VISIT AGAIN!!!");
+}
+}
+
+
+
+
+
+
+
+ 
+
